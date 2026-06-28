@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chollada Health Check 360 Home</title>
+<style>
+:root{
+  --g:#7fcfb6;--gd:#2f8f79;--b:#1f5f99;--bg:#f6fbfa;--t:#1f2937;--m:#667085;--l:#e5ecea;
+  --dark:#12312b;--orange:#f79009;--blue:#2e90fa;--pink:#d4447a;--purple:#7a5af8;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans Thai",sans-serif;background:
+radial-gradient(circle at top left,rgba(127,207,182,.28),transparent 34%),
+radial-gradient(circle at 85% 12%,rgba(46,144,250,.13),transparent 28%),
+var(--bg);color:var(--t)}
+.hero{width:min(1120px,calc(100% - 28px));margin:0 auto;padding:30px 0 18px;text-align:center}
+.brand{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--l);border-radius:999px;padding:8px 14px;color:var(--gd);font-weight:950;box-shadow:0 8px 20px rgba(16,24,40,.05)}
+.dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--b))}
+h1{margin:16px auto 8px;font-size:clamp(32px,7vw,58px);letter-spacing:-.06em;color:var(--dark);line-height:1.05;max-width:900px}
+.sub{max-width:820px;margin:0 auto;color:var(--m);line-height:1.75;font-size:16px}
+.notice{max-width:920px;margin:18px auto 0;background:#fff7e6;border:1px solid #fedf89;color:#7a4f01;border-radius:18px;padding:13px 15px;line-height:1.65;text-align:left}
+.wrap{width:min(1120px,calc(100% - 28px));margin:0 auto 42px}
+.panel{background:rgba(255,255,255,.82);border:1px solid var(--l);border-radius:28px;padding:18px;box-shadow:0 18px 50px rgba(16,24,40,.08);backdrop-filter:blur(10px)}
+.headRow{display:flex;gap:14px;align-items:flex-end;justify-content:space-between;margin:2px 4px 16px}
+.headRow h2{margin:0;color:var(--dark);font-size:24px;letter-spacing:-.03em}
+.headRow p{margin:4px 0 0;color:var(--m);line-height:1.6}
+.quick{display:inline-flex;align-items:center;gap:8px;background:#eef8ff;color:#175cd3;border:1px solid #b2ddff;border-radius:999px;padding:8px 12px;font-weight:900;font-size:13px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{position:relative;min-height:320px;background:#fff;border:1px solid var(--l);border-radius:24px;padding:16px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;box-shadow:0 10px 24px rgba(16,24,40,.06);transition:.18s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(16,24,40,.12)}
+.card:before{content:"";position:absolute;inset:0 0 auto 0;height:7px;background:linear-gradient(90deg,var(--accent),rgba(255,255,255,0))}
+.icon{width:54px;height:54px;border-radius:18px;background:color-mix(in srgb,var(--accent) 14%,white);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:950;margin:6px 0 12px;border:1px solid color-mix(in srgb,var(--accent) 26%,white)}
+.card h3{margin:0 0 8px;color:var(--dark);font-size:21px;letter-spacing:-.03em;line-height:1.2}
+.card p{margin:0;color:var(--m);line-height:1.58;font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}
+.tag{font-size:12px;font-weight:900;border-radius:999px;padding:5px 8px;background:#f8fafc;border:1px solid var(--l);color:#475467}
+.cta{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;border-radius:16px;background:linear-gradient(135deg,var(--dark),var(--b));color:#fff;padding:11px 12px;font-weight:950}
+.cta span:last-child{font-size:20px}
+.child{--accent:#2e90fa}.metabolic{--accent:#2f8f79}.cancer{--accent:#d4447a}.senior{--accent:#7a5af8}
+.footerGrid{display:grid;grid-template-columns:1.4fr .8fr;gap:14px;margin-top:14px}
+.infoBox{background:#fff;border:1px solid var(--l);border-radius:22px;padding:16px;box-shadow:0 10px 24px rgba(16,24,40,.05)}
+.infoBox h3{margin:0 0 8px;color:var(--dark)}.infoBox p,.infoBox li{color:var(--m);line-height:1.65}.infoBox ul{margin:8px 0 0;padding-left:20px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.btn{border-radius:14px;padding:12px 14px;font-weight:950;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.primary{background:linear-gradient(135deg,var(--gd),var(--b));color:#fff}.outline{background:#fff;color:var(--gd);border:1px solid rgba(47,143,121,.35)}
+@media(max-width:1040px){.grid{grid-template-columns:repeat(2,1fr)}.footerGrid{grid-template-columns:1fr}}
+@media(max-width:620px){.hero{padding-top:22px}.panel{padding:13px;border-radius:22px}.grid{grid-template-columns:1fr}.card{min-height:auto}.headRow{display:block}.quick{margin-top:10px}.actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="brand"><span class="dot"></span>CHOLLADA hospital</div>
+  <h1>Chollada Health Check 360</h1>
+  <p class="sub">เลือกหัวข้อสุขภาพที่คุณสนใจ ระบบจะพาไปประเมินแบบสั้น ๆ และแนะนำบริการหรือ package ที่เหมาะกับคุณ</p>
+  <div class="notice"><b>หมายเหตุ:</b> ผลประเมินนี้เป็นคำแนะนำเบื้องต้น ไม่ใช่การวินิจฉัยโรค หากมีอาการผิดปกติรุนแรงหรือเร่งด่วน กรุณาพบแพทย์หรือโทรโรงพยาบาลโดยตรง</div>
+</section>
+
+<main class="wrap">
+  <section class="panel">
+    <div class="headRow">
+      <div>
+        <h2>เลือกหัวข้อที่ต้องการประเมิน</h2>
+        <p>ใช้เวลาประมาณ 1–3 นาทีต่อหัวข้อ และสามารถขอให้เจ้าหน้าที่ติดต่อกลับได้หลังประเมิน</p>
+      </div>
+      <div class="quick">LINE OA / Rich Menu Ready</div>
+    </div>
+
+    <div class="grid">
+      <a class="card child" href="chollada_child_growth_vaccine_check_v1_4.html">
+        <div class="icon">👶</div>
+        <h3>เด็ก: การเติบโตและวัคซีน</h3>
+        <p>ประเมิน BMI/percentile เบื้องต้น และทบทวนวัคซีนพื้นฐานหรือวัคซีนเสริมตามวัย</p>
+        <div class="tags"><span class="tag">Growth</span><span class="tag">Pediatric vaccine</span><span class="tag">Child health</span></div>
+        <div class="cta"><span>เริ่มประเมิน</span><span>›</span></div>
+      </a>
+
+      <a class="card metabolic" href="chollada_adult_metabolic_weight_check_v1_3.html">
+        <div class="icon">❤️</div>
+        <h3>น้ำหนัก โรคอ้วน และความเสี่ยงหัวใจ</h3>
+        <p>ดูภาวะอ้วนลงพุง, Thai CV risk, ความเสี่ยงหยุดหายใจขณะนอนหลับ และ package ที่เหมาะสม</p>
+        <div class="tags"><span class="tag">Weight</span><span class="tag">CV risk</span><span class="tag">OSA</span></div>
+        <div class="cta"><span>เริ่มประเมิน</span><span>›</span></div>
+      </a>
+
+      <a class="card cancer" href="chollada_adult_cancer_screening_check_v1_4.html">
+        <div class="icon">🎗️</div>
+        <h3>คัดกรองมะเร็งตามวัยและความเสี่ยง</h3>
+        <p>สรุปว่าควรคัดกรองมะเร็งอะไร และเลือก add-on เข้ากับ Package ตรวจสุขภาพ Plus</p>
+        <div class="tags"><span class="tag">Cancer screening</span><span class="tag">Add-on</span><span class="tag">Package</span></div>
+        <div class="cta"><span>เริ่มประเมิน</span><span>›</span></div>
+      </a>
+
+      <a class="card senior" href="chollada_senior_program_vaccine_check_v1_2.html">
+        <div class="icon">🛡️</div>
+        <h3>วัคซีนผู้ใหญ่และ Senior Program</h3>
+        <p>ทบทวนวัคซีนที่ควรฉีด/รอทบทวน พร้อมราคาเบื้องต้น และบริการ Senior Health Check</p>
+        <div class="tags"><span class="tag">Adult vaccine</span><span class="tag">Senior</span><span class="tag">Vaccine price</span></div>
+        <div class="cta"><span>เริ่มประเมิน</span><span>›</span></div>
+      </a>
+    </div>
+
+    <div class="footerGrid">
+      <div class="infoBox">
+        <h3>หลังประเมินแล้วทำอะไรต่อ?</h3>
+        <ul>
+          <li>ดูผลสรุปและบริการที่เหมาะกับคุณ</li>
+          <li>เลือก package / vaccine / add-on ที่สนใจ</li>
+          <li>ฝากชื่อ เบอร์ และหัวข้อให้เจ้าหน้าที่ติดต่อกลับได้</li>
+          <li>ข้อมูล lead ทุก module สามารถรวมเข้า Google Sheet เดียวเพื่อให้เจ้าหน้าที่ติดตามต่อ</li>
+        </ul>
+      </div>
+      <div class="infoBox">
+        <h3>ติดต่อโรงพยาบาล</h3>
+        <p>โรงพยาบาลชลลดา<br>โทร 02 571 7799<br>LINE OA: CHOLLADA hospital</p>
+        <div class="actions">
+          <a class="btn primary" href="tel:025717799">โทรสอบถาม</a>
+          <a class="btn outline" href="chollada_booking_google_sheet_connected.html">ขอนัดหมาย</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
